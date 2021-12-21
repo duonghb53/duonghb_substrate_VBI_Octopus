@@ -1,0 +1,6 @@
+Two error when install in WSL2L ubuntu 20.04.3 LTS:
+1. failed to run custom build command for librocksdb-sys v6.11.4
+--> Install clang: sudo apt install clang
+2. linker cc not found rust:
+--> sudo apt-get update
+sudo apt install build-essential: package include: libc, gcc, g ++, make, dpkg-dev, v.v
