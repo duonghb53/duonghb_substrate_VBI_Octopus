@@ -1,5 +1,5 @@
 [package]
-name = 'pallet-template'
+name = 'pallet-crud'
 version = '4.0.0-dev'
 description = 'FRAME pallet template for defining custom runtime logic.'
 authors = ['Substrate DevHub <https://github.com/substrate-developer-hub>']
@@ -37,18 +37,22 @@ git = 'https://github.com/paritytech/substrate.git'
 tag = 'monthly-2021-12'
 version = '4.0.0-dev'
 
+[dependencies.log]
+default-features = false
+version = '0.4.14'
+
 [dependencies.scale-info]
 default-features = false
 features = ['derive']
 version = '1.0'
 
-[dev-dependencies.sp-core]
+[dependencies.sp-io]
 default-features = false
 git = 'https://github.com/paritytech/substrate.git'
 tag = 'monthly-2021-12'
 version = '4.0.0-dev'
 
-[dev-dependencies.sp-io]
+[dev-dependencies.sp-core]
 default-features = false
 git = 'https://github.com/paritytech/substrate.git'
 tag = 'monthly-2021-12'
@@ -66,6 +70,8 @@ runtime-benchmarks = ['frame-benchmarking']
 std = [
     'codec/std',
     'scale-info/std',
+    'sp-io/std',
+    'log/std',
     'frame-support/std',
     'frame-system/std',
     'frame-benchmarking/std',
